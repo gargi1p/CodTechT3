@@ -1,0 +1,12 @@
+LOAD DATABASE
+     FROM mysql://root:1708@localhost/source_db
+     INTO postgresql://postgres:170805@localhost/target_db
+
+WITH include drop, create tables, create indexes, reset sequences
+
+SET work_mem to '16MB', maintenance_work_mem to '512 MB';
+
+CAST type datetime to timestamptz;
+
+BEFORE LOAD DO
+$$ DROP SCHEMA IF EXISTS public CASCADE; CREATE SCHEMA public; $$;
