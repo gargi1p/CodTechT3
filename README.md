@@ -1,4 +1,4 @@
-# CodTech Internship – SQL Task 3: Database Migration
+# 🚀 CodTech SQL Internship – Task 3
 
 **Migration Date:** 2025-06-26
 
